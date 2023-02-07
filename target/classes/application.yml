@@ -1,0 +1,47 @@
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: lsj20030222
+      url: jdbc:mysql://localhost:3306/luckysj?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+  #邮箱配置
+  mail:
+    host: smtp.qq.com
+    username: 1321928757@qq.com
+    password: kjkwjjjtudszjdei
+  #redis缓存服务器配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  #上传下载配置
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+file:
+  baseDir: /usr/local/app_file/luckysj/img/
+
+
+mybatis-plus:
+  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: false
+  global-config:
+    db-config:
+      id-type: assign_id
+
+server:
+  port: 8080
+
+#腾讯云coas服务配置
+cos:
+  baseUrl: "https://luckysj-1314434715.cos.ap-shanghai.myqcloud.com"
+  accessKey: "AKID3zhCTVJtFMErGQLL8h071g6KMCn9dvzq"
+  secretKey: "iEWbVChz3vYzEAtdHK6qQoxrY5OSItGO"
+  regionName: "ap-shanghai"
+  bucketName: "luckysj-1314434715"
+  folderPrefix: "/files"
+
